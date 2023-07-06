@@ -1,5 +1,8 @@
-import "./globals.css";
 import { Roboto_Slab } from "next/font/google";
+
+import Footer from "@/components/footer";
+
+import "./globals.css";
 
 const Roboto = Roboto_Slab({ subsets: ["latin"] });
 
@@ -15,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={Roboto.className}>{children}</body>
+      <body className={Roboto.className}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
